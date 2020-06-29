@@ -1,0 +1,13 @@
+function myReplace(str, before, after) {
+  let newStr = str.split(" ");
+  let index =newStr.indexOf(before);
+  if (before.charCodeAt(0)<91){
+    let afterN =after.slice(0,1).toUpperCase()+after.slice(1) 
+      newStr.splice(index, 1, afterN);
+      return newStr.join(" ");
+  }else{
+     newStr.splice(index, 1, after);
+     return newStr.join(" ");
+  }  
+ 
+}
