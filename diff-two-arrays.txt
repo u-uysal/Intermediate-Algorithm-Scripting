@@ -1,0 +1,11 @@
+function diffArray(arr1, arr2) {
+    var newArr = [];
+    let differOneOfTwo=arr1.filter(item=>arr2.indexOf(item)<0);
+    console.log(differOneOfTwo)
+    let differTwoOfOne=arr2.filter(item=>arr1.indexOf(item)<0);
+    console.log(differTwoOfOne)
+    newArr = differOneOfTwo.concat(differTwoOfOne)
+    return newArr;
+  }
+  
+  console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
