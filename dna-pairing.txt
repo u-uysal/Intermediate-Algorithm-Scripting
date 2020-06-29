@@ -1,0 +1,13 @@
+const dnaPair = {
+  A : "T",
+  T : "A",
+  G : "C",
+  C : "G",
+}
+
+function pairElement(str) {
+  
+  return str.split("").map(item=>([item,dnaPair[item]]));
+}
+
+console.log(pairElement("GCG"));
