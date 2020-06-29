@@ -1,0 +1,18 @@
+function sumAll(arr) {
+  let m = arr[0];
+  let n = arr[1];
+
+  let result;
+  
+  if(m>n) {
+    result = (m*(m+1) /2)-n*(n-1) /2;
+   return result
+  }else {
+    result = (n*(n+1) /2)-m*(m-1) /2;
+    return result;
+  }
+  
+}
+
+console.log(sumAll([5,10]));
+
