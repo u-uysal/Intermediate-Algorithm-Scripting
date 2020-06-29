@@ -1,0 +1,22 @@
+function fearNotLetter(str) {
+  let newStr = str.split("");
+  let index;
+  let indexAr= [];
+for (let i = 0; i < newStr.length; i++) {
+
+  index = str.charCodeAt(i);
+  indexAr.push(index) 
+}
+// [97,98,99,101]
+for (let i = 0; i < indexAr.length; i++) {
+  if(indexAr[i+1]-indexAr[i]>1){
+    let num =str.charCodeAt(i)+1
+    
+    return String.fromCharCode(num);
+  }
+  
+}
+ 
+}
+
+console.log(fearNotLetter("abce"))
