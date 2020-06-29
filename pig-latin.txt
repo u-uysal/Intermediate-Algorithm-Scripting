@@ -1,0 +1,28 @@
+function translatePigLatin(str) {
+  let vowels =["a", "e", "i", "o", "u"];
+  let index ;
+  let newArray = [];
+  for(let i = 0 ; i<vowels.length;i++){
+    index=str.indexOf(vowels[i])
+    newArray.push(index);   
+  }
+ 
+  let arrayOfIndex =newArray.filter(item=>item>-1)
+  if (arrayOfIndex.length === 0){
+
+    return str+"ay"
+  }
+  arrayOfIndex.sort()
+  let firstIndex =arrayOfIndex[0];
+  if(vowels.includes(str[0])==true){
+
+    return str+"way"
+    
+  }else {
+    let newStr = str.slice(firstIndex) +str.slice(0,firstIndex)+"ay"
+    return newStr
+  }
+ 
+}
+
+console.log(translatePigLatin("schwartz"));
