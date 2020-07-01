@@ -1,0 +1,20 @@
+function addTogether() {
+  //Variable and subroutine declaration (optional, but makes code cleaner)
+  let args = arguments;
+  let a = args[0];
+  let b = args[1];
+  function isNum(num) {
+    return Number.isInteger(num);
+  }
+
+ 
+  if (isNum(a)) {
+    if (isNum(b))
+      return a + b;
+    else if (!b)
+      return function(b) {
+        if (isNum(b))
+          return a + b;
+      };
+  }
+}
