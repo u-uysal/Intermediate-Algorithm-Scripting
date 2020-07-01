@@ -1,0 +1,7 @@
+function binaryAgent(str) {
+  let newStr = str.split(" ");
+  let parsAr= newStr.map(item=>parseInt(item,2));
+  parsAr =parsAr.map(item=>String.fromCharCode(item))
+
+  return parsAr.join("");
+}
