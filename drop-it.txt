@@ -1,0 +1,8 @@
+function dropElements(arr, func) {
+  let index = arr.findIndex(func);
+  if(index=== -1){
+    return [];
+  }
+  console.log(index)
+  return arr.slice(index);
+}
