@@ -1,0 +1,10 @@
+function palindrome(str) {
+ let newStr= str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+ let reservedString = newStr.toLowerCase().split("").reverse().join("");
+ if(reservedString===newStr){
+   return true;
+ }
+ console.log(reservedString)
+ console.log(newStr)
+  return false;
+}
