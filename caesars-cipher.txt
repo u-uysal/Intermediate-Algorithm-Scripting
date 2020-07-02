@@ -1,0 +1,27 @@
+function rot13(str) {
+ let newArray =[];
+ let newStr = str.split("")
+ let indexArray =newStr.map(item=>newStr.indexOf(item));
+ let charArray =indexArray.map(item=>str.charCodeAt(item));
+  for (let i = 0; i < charArray.length; i++) {
+    if(64<Number(charArray[i]) && 91>Number(charArray[i]) ){
+
+      if(charArray[i] +13 > 90) {
+
+        newArray[i]=charArray[i]-13;        
+
+      }else {
+        newArray[i]=charArray[i]+13;
+       
+      }
+
+    }else {
+      newArray[i]=charArray[i];
+    }
+    
+  }
+ let strArray =newArray.map(item=>String.fromCharCode(item)).join("");
+
+
+  return strArray;
+}
